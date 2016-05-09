@@ -9,7 +9,7 @@ import javax.ws.rs.core.Application;
 
 import br.fa7.ejb.loja.resource.ProdutoResource;
 
-@ApplicationPath("/loja")
+@ApplicationPath("/api")
 public class RestApplication extends Application {
 
 	public Set<Class<?>> getClasses(){

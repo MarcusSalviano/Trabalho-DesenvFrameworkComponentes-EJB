@@ -12,7 +12,6 @@ import javax.ws.rs.core.MediaType;
 
 import br.fa7.ejb.loja.entity.Produto;
 
-@Singleton
 @Path("/produtos")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
