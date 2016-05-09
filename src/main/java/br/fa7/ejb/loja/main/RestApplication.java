@@ -1,4 +1,4 @@
-package br.fa7.ejb.loja;
+package br.fa7.ejb.loja.main;
 
 import java.util.Arrays;
 import java.util.HashSet;

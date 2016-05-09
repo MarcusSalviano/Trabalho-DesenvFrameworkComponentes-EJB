@@ -3,7 +3,6 @@ package br.fa7.ejb.loja.resource;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.ejb.Singleton;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
