@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import br.fa7.spring.loja.entity.Cliente;
+
 @Entity
 public class Compra {
 	@Id
@@ -30,15 +32,15 @@ public class Compra {
 		this.produto = produto;
 	}
 	
-	//Cliente cliente;
+	Cliente cliente;
 
-	//public Cliente getCliente() {
-	//	return cliente;
-	//}
+	public Cliente getCliente() {
+		return cliente;
+	}
 
-	//public void setCliente(Cliente cliente) {
-	//	this.cliente = cliente;
-	//}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
 	
 	double valor;
 

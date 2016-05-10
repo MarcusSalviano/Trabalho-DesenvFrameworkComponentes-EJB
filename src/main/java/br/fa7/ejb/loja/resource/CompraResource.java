@@ -1,6 +1,5 @@
 package br.fa7.ejb.loja.resource;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -14,36 +13,36 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import br.fa7.ejb.loja.entity.Produto;
-import br.fa7.ejb.loja.services.ProdutoService;
-import br.fa7.spring.loja.entity.Endereco;
+import br.fa7.ejb.loja.entity.Compra;
+import br.fa7.ejb.loja.services.CompraService;
 
-@Path("/produtos")
+@Path("/compras")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class ProdutoResource {
+public class CompraResource {
 
 	@Inject
-	private ProdutoService produtoService;
+	private CompraService compraService;
 
 	@GET
-	public List<Produto> findAll() {
-		return produtoService.findAll();
+	public List<Compra> findAll() {
+		return compraService.findAll();
 	}
 	
+
 	@GET
 	@Path("{id}")
 	public Response get(@PathParam("id") Long id){
-		Produto produto = produtoService.findById(id);
-		if(produto==null){
+		Compra compra = compraService.findById(id);
+		if(compra==null){
 			return Response.status(Status.NOT_FOUND).build();
 		}
-		return Response.ok(produto).build();
+		return Response.ok(compra).build();
 	}
 	
 	@POST
-	public Produto insert(Produto produto){
-		produtoService.insert(produto);
-		return produto;
+	public Compra insert(Compra compra){
+		compraService.insert(compra);
+		return compra;
 	}
 }
